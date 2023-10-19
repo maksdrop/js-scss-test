@@ -2,10 +2,10 @@
 
 ### `Technologies`
 
-##### `JavaScript`
-##### `SCSS`
-##### `HTML`
+**`- JavaScript`**
+**`- SCSS`**
+**`- HTML`**
 
 ### `GitHub Pages`
 
-#### [result](https://maksdrop.github.io/js-scss-test/)
+**[result](https://maksdrop.github.io/js-scss-test/)**
