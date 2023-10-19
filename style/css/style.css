@@ -1,0 +1,405 @@
+@font-face {
+  font-family: "FuturaPT";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/futura/FuturaPT-Demi.woff2") format("woff2"), url("/fonts/futura/FuturaPT-Demi.woff") format("woff");
+}
+@font-face {
+  font-family: "ProximaNova";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/proxima-nova/ProximaNova-Regular.woff2") format("woff2"), url("/fonts/proxima-nova/ProximaNova-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "ProximaNova";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/proxima-nova/ProximaNova-Semibold.woff2") format("woff2"), url("/fonts/proxima-nova/ProximaNova-Semibold.woff") format("woff");
+}
+@font-face {
+  font-family: "Wix";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/wix/WixMadeforText-SemiBold.woff2") format("woff2"), url("/fonts/wix/WixMadeforText-SemiBold.woff") format("woff");
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0 !important;
+  color: #666666;
+  width: 100%;
+  font-family: "ProximaNova", "Arial", sans-serif;
+  font-size: 14px;
+}
+
+button {
+  padding: 0;
+  border: 0;
+}
+
+.card {
+  height: 100vh;
+  padding-top: 20px;
+  background: #ececec;
+}
+.card__container {
+  max-width: 768px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.card-header {
+  margin: 0 16px;
+  padding: 16px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.card-header__expert {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  grid-template-areas: "image top" "image bottom";
+  column-gap: 8px;
+  line-height: 16px;
+}
+.card-header__expert-wrapper {
+  grid-area: top;
+  display: flex;
+  justify-content: space-between;
+}
+.card-header__expert-name {
+  font-weight: 600;
+  color: #333333;
+}
+.card-header__expert-statistic {
+  display: inline-block;
+}
+.card-header__expert-desktop {
+  display: none;
+}
+.card-header__expert-link {
+  grid-area: image;
+}
+.card-header__expert-link img {
+  width: 32px;
+  border-radius: 50%;
+}
+.card-header__expert-number {
+  grid-area: bottom;
+}
+.card-header__expert .statistic {
+  display: flex;
+  justify-content: space-between;
+}
+.card-header__expert .statistic__mark {
+  display: none;
+}
+.card-header__expert .statistic__green {
+  color: #62B435;
+}
+.card-header__expert .statistic__green::after {
+  content: "/";
+  color: #cccccc;
+}
+.card-header__expert .statistic__grey {
+  color: #a1aab2;
+}
+.card-header__expert .statistic__grey::after {
+  content: "/";
+  color: #cccccc;
+}
+.card-header__expert .statistic__red {
+  color: #F64747;
+}
+.card-header__expert .statistic__red::after {
+  content: "/";
+  color: #cccccc;
+}
+.card-header__expert .statistic__percent-roi {
+  color: #333333;
+}
+.card-header__expert .statistic__profit {
+  font-weight: 600;
+  color: #62B435;
+}
+
+@media (min-width: 744px) {
+  .card-header {
+    margin: 0 24px;
+    padding: 24px 0 20px 0;
+  }
+  .card-header__expert {
+    grid-template-columns: 32px 1fr 1fr;
+    grid-template-areas: "image top bottom" "image top bottom";
+  }
+  .card-header__expert-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+  }
+  .card-header__expert-desktop {
+    display: inline-block;
+  }
+  .card-header__expert .statistic {
+    display: flex;
+    gap: 12px;
+  }
+  .card-header__expert .statistic__container {
+    display: grid;
+    grid-template-columns: 64px 64px 64px 64px;
+    column-gap: 12px;
+    height: 40px;
+  }
+  .card-header__expert .statistic__mark {
+    display: block;
+    font-weight: 600;
+    line-height: 16px;
+  }
+  .card-header__expert .statistic__line {
+    font-weight: 600;
+  }
+  .card-header__expert .statistic__line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    width: 100%;
+    height: 1px;
+    background: #e6e6e6;
+  }
+  .card-header__expert .statistic__green {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-header__expert .statistic__grey {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-header__expert .statistic__red {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-header__expert .statistic__percent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #62B435;
+  }
+  .card-header__expert .statistic__percent-roi {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  .card-header__expert .statistic__profit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 64px;
+  }
+  .card-header__expert .statistic__profit-title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #333333;
+  }
+}
+.card-description {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  margin: 16px;
+}
+.card-description__text {
+  display: -webkit-box;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 120px;
+  font-size: 16px;
+  line-height: 24px;
+  transition: max-height 0.5s ease;
+}
+.card-description__text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 27px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 16.67%, #ffffff 100%);
+}
+.card-description__input {
+  display: none;
+}
+.card-description__input:checked + .card-description__text {
+  max-height: 20000px;
+  transition: max-height 0.5s ease-in;
+}
+.card-description__input:checked + .card-description__text::after {
+  content: none;
+}
+.card-description__button {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  bottom: -38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transform: rotate(135deg);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+.card-description__button:hover {
+  border: 1px solid #eeeeee;
+}
+.card-description__button::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-width: 2px 2px 0 0;
+  border-style: solid;
+  border-color: #999999;
+  transition: 0.2s ease;
+  display: block;
+  transform-origin: 100% 0;
+}
+
+@media (min-width: 744px) {
+  .card-description {
+    margin: 20px 24px 24px;
+  }
+  .card-description__button {
+    bottom: -44px;
+  }
+}
+.card-forecast__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "title rate" "stake rate" "button button";
+  background: #f9f9fa;
+  border-radius: 8px;
+  padding: 16px;
+}
+.card-forecast__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: #3498db;
+}
+.card-forecast__title {
+  grid-area: title;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #999999;
+}
+.card-forecast__stake {
+  grid-area: stake;
+  padding-right: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #333333;
+}
+.card-forecast__rate {
+  grid-area: rate;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.card-forecast__rate .rate__num {
+  display: flex;
+  flex-direction: column;
+}
+.card-forecast__rate .rate__text {
+  font-size: 12px;
+  line-height: 14px;
+  color: #333333;
+}
+.card-forecast__rate .rate__text-desktop {
+  display: none;
+}
+.card-forecast__rate .rate__factor {
+  font-family: "FuturaPT", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+}
+.card-forecast__button {
+  grid-area: button;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  background: #3498db;
+}
+.card-forecast__button span {
+  font-family: "Wix", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+@media (min-width: 744px) {
+  .card-forecast__container {
+    grid-template-columns: 1fr auto 140px;
+    grid-template-areas: "title rate button" "stake rate button";
+    column-gap: 16px;
+    padding: 24px;
+  }
+  .card-forecast__stake {
+    padding-right: 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .card-forecast__rate {
+    align-items: center;
+  }
+  .card-forecast__rate .rate__text-mobile {
+    display: none;
+  }
+  .card-forecast__rate .rate__text-desktop {
+    display: block;
+  }
+  .card-forecast__button {
+    margin-top: 0;
+  }
+}
+.card-footer {
+  padding-top: 12px;
+}
+
+@media (min-width: 744px) {
+  .card-footer {
+    padding-top: 16px;
+  }
+}

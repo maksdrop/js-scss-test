@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "FuturaPT";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/futura/FuturaPT-Demi.woff2") format("woff2"),
+    url("/fonts/futura/FuturaPT-Demi.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/proxima-nova/ProximaNova-Regular.woff2") format("woff2"),
+    url("/fonts/proxima-nova/ProximaNova-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/proxima-nova/ProximaNova-Semibold.woff2") format("woff2"),
+    url("/fonts/proxima-nova/ProximaNova-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Wix";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/wix/WixMadeforText-SemiBold.woff2") format("woff2"),
+    url("/fonts/wix/WixMadeforText-SemiBold.woff") format("woff");
+}

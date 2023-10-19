@@ -1,0 +1,19 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0 !important;
+  color: $textСolor-main;
+  width: 100%;
+  font-family: $fontFamily-proxima;
+  font-size: $fontSize-small_big;
+}
+
+button {
+  padding: 0;
+  border: 0;
+}

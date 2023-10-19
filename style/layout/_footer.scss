@@ -1,0 +1,9 @@
+.card-footer {
+  padding-top: 12px;
+}
+
+@media (min-width: $desktop-width) {
+  .card-footer {
+    padding-top: 16px;
+  }
+}

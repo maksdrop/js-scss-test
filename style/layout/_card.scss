@@ -1,0 +1,12 @@
+.card {
+  height: 100vh;
+  padding-top: 20px;
+  background: #ececec;
+
+  &__container {
+    max-width: 768px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: $textСolor-white;
+  }
+}

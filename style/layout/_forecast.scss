@@ -1,0 +1,127 @@
+.card-forecast {
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title rate"
+      "stake rate"
+      "button button";
+    background: #f9f9fa;
+    border-radius: 8px;
+    padding: 16px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 2px;
+      background: #3498db;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    margin-bottom: 8px;
+    font-size: $fontSize-small;
+    font-weight: 600;
+    line-height: 14px;
+    color: $textСolor-grey;
+  }
+
+  &__stake {
+    grid-area: stake;
+    padding-right: 12px;
+    font-size: $fontSize-medium_small;
+    font-weight: 600;
+    line-height: 18px;
+    color: $textСolor-secondary;
+  }
+
+  &__rate {
+    grid-area: rate;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+
+    .rate {
+      &__num {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__text {
+        font-size: $fontSize-small;
+        line-height: 14px;
+        color: $textСolor-secondary;
+
+        &-desktop {
+          display: none;
+        }
+      }
+
+      &__factor {
+        font-family: $fontFamily-futura;
+        font-size: $fontSize-medium;
+        line-height: 22px;
+        color: $textСolor-secondary;
+      }
+    }
+  }
+
+  &__button {
+    grid-area: button;
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    background: #3498db;
+
+    span {
+      font-family: $fontFamily-wix;
+      font-size: $fontSize-small_big;
+      line-height: 16px;
+      color: $textСolor-white;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card-forecast {
+    &__container {
+      grid-template-columns: 1fr auto 140px;
+      grid-template-areas:
+        "title rate button"
+        "stake rate button";
+      column-gap: 16px;
+      padding: 24px;
+    }
+
+    &__stake {
+      padding-right: 0;
+      font-size: $fontSize-medium;
+      line-height: 20px;
+    }
+
+    &__rate {
+      align-items: center;
+
+      .rate {
+        &__text {
+          &-mobile {
+            display: none;
+          }
+
+          &-desktop {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &__button {
+      margin-top: 0;
+    }
+  }
+}
